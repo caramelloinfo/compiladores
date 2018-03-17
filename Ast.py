@@ -2,28 +2,28 @@ class No:
     def __init__(self,valor):
 
         self.info=valor
-        self.esq=None
-        self.meio=None
-        self.dir=None
+        self.e1=None
+        self.oper=None
+        self.e2=None
 
     def insere(self,valor):
-        if self.esq == None:
-            self.esq = No(valor)
-            print("________insere na esquerda_________")
-            print(self.esq.info)
+        if self.e1 == None:
+            self.e1 = No(valor)
+            print("________ E :: insere na esquerda")
+            print(self.e1.info)
 
         else:
-            if self.meio == None:
-                self.meio = No(valor)
-                print("________insere no meio_________")
-                print(self.meio.info)
+            if self.oper == None:
+                self.oper = No(valor)
+                print("________ OPERADOR :: insere no meio")
+                print(self.oper.info)
             else:
-                if self.dir == None:
-                    self.dir = No(valor)
-                    print("________insere na direita_________")
-                    print(self.dir.info)
+                if self.e2 == None:
+                    self.e2 = No(valor)
+                    print("________ E :: insere na direita")
+                    print(self.e2.info)
                 else:
-                    self.dir.insere(valor)
+                    self.e2.insere(valor)
 
 '-------------------------------------------------------'
 
@@ -34,8 +34,9 @@ class Ast:
     def insere(self,valor):
         if self.raiz == None:
             self.raiz = No(valor)
-            print("________insere na raiz_________")
+            print("________raiz____________")
             print(self.raiz.info)
         else:
             self.raiz.insere(valor)
-            print("raiz ocupada, ver os lador e meio")
+            
+
