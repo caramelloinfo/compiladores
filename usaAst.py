@@ -26,11 +26,18 @@ keywords = {
     }
 
 expressao = "x+y"
-linha = expressao.split()
 exp = None
 cont = 0
-for e in expressao:    
+splitadas = []
+for e in expressao:
     exp = expressao[cont]
     a1.insere(exp)
+    splitadas.append(exp)
     cont=cont+1
+
+    if exp in keywords:
+        print("|| token: ",exp,"\n|| descrição: ", keywords[exp], "\n|| posição: ",expressao.index(exp))
+
+
+print("splitadas", splitadas)
     
